@@ -78,6 +78,19 @@ const makeAlbumCard = function (album) {
   return albumDiv;
 }
 
+// render all albums and inject into container
+
+const renderAllAlbums = function () {
+  const container = document.querySelector(".container");
+  albums.forEach((album) => {
+    const card = makeAlbumCard(album);
+    container.appendChild(card);
+  })
+}
+
+// handle submit, creates a new album object from form
+// adds it to albums list and triggers a redraw
+
 const handleSubmit = (event) => {
   event.preventDefault();
   console.log("Inside submit handler")
