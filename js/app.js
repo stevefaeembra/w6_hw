@@ -124,7 +124,11 @@ const refreshAlbumList = function () {
 
 const sortAlbumsByField = function (fieldName) {
 
-  return albums.sort(function(a, b){return 0.5 - Math.random()});
+  return albums.sort((a, b) => {
+    if (a[fieldName] > b[fieldName]) return 1;
+    if (a[fieldName] < b[fieldName]) return -1;
+    return 0;
+  });
 
 }
 
