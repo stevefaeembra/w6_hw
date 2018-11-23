@@ -48,10 +48,12 @@ body {
 .album-card .genre {
   order: 4;
   font-size: 0.8rem;
+  font-style: italic;
 }
 .album-card .year {
   order: 5;
   font-size: 0.8rem;
+  font-style: italic;
 }
 .album-card .rating {
   order: 6;
@@ -62,8 +64,8 @@ body {
 }
 
 .thumbnail img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 200px;
+  height: 200px;
 }
 
 .filledStar {
