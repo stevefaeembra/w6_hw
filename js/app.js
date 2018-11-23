@@ -15,7 +15,7 @@ const Album = function (name,artist,year,genre,rating,url) {
 // I intend to add functionality like sorting so I want to
 // have somewhere to store the data outside of the DOM
 
-const albums = [
+let albums = [
 
   new Album("Dark Side of the Moon","Pink Floyd",1973,"Prog",3,"http://quizpug.com/wp-content/uploads/qc-images/59ca6acd85f16.jpg"),
   new Album("777","System7",1993,"Electronica",3,"https://upload.wikimedia.org/wikipedia/en/9/9d/System_7_-_777.jpg"),
@@ -124,11 +124,14 @@ const refreshAlbumList = function () {
 
 const sortAlbumsByField = function (fieldName) {
 
-  return albums.sort((a, b) => {
+  let newAlbumList = albums.sort((a, b) => {
     if (a[fieldName] > b[fieldName]) return 1;
     if (a[fieldName] < b[fieldName]) return -1;
     return 0;
   });
+
+  albums = newAlbumList;
+  refreshAlbumList();
 
 }
 
@@ -156,6 +159,7 @@ const handleSubmit = (event) => {
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('JavaScript loaded');
+  sortAlbumsByField("name");
   refreshAlbumList();
   const submit = document.querySelector('form');
   submit.addEventListener('submit', handleSubmit);
