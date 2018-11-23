@@ -36,17 +36,29 @@ body {
   text-align: center;
 }
 .album-card .albumName {
+  order: 1;
   color: red;
   font-size: 1.2rem;
+  border-bottom: 2px ridge black;
 }
-.album-card .artistName {
+.album-card .ArtistName {
+  order: 2;
   font-size: 1.1rem;
 }
 .album-card .genre {
+  order: 4;
   font-size: 0.8rem;
 }
 .album-card .year {
+  order: 5;
   font-size: 0.8rem;
+}
+.album-card .rating {
+  order: 6;
+  font-size: 1rem;
+}
+.album-card .thumbail {
+  order: 3;
 }
 
 .thumbnail img {
