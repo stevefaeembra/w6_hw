@@ -27,6 +27,57 @@ const albums = [
 
 ];
 
+// this function takes an album object and creates a div.album-card for an album
+// tested using console, e.g. makeAlbumCard(albums[1])
+
+const makeAlbumCard = function (album) {
+
+  // top level div
+  const albumDiv = document.createElement("div");
+  albumDiv.className = "album-card";
+
+  // make the child divs
+  const titleDiv = document.createElement("div");
+  titleDiv.className = "albumName";
+  titleDiv.textContent = album.name;
+
+  const artistDiv = document.createElement("div");
+  artistDiv.className = "ArtistName";
+  artistDiv.textContent = album.artist;
+
+  const yearDiv = document.createElement("div");
+  yearDiv.className = "year";
+  yearDiv.textContent = album.year;
+
+  const genreDiv = document.createElement("div");
+  genreDiv.className = "genre";
+  genreDiv.textContent = album.genre;
+
+  const ratingDiv = document.createElement("div");
+  ratingDiv.className = "rating";
+  ratingDiv.textContent = album.rating;
+
+  // make a thumbnail. this has an img child
+  const thumbnailDiv = document.createElement("div");
+  thumbnailDiv.className = "thumbnail";
+
+  // add image child to thumbnail parent
+  const image = document.createElement("img");
+  image.setAttribute("src",album.url);
+  thumbnailDiv.appendChild(image);
+
+  // add child divs to album div
+  albumDiv.appendChild(titleDiv);
+  albumDiv.appendChild(artistDiv);
+  albumDiv.appendChild(yearDiv);
+  albumDiv.appendChild(ratingDiv);
+  albumDiv.appendChild(genreDiv);
+  albumDiv.appendChild(thumbnailDiv);
+
+  // send back albumDiv
+  return albumDiv;
+}
+
 const handleSubmit = (event) => {
   event.preventDefault();
   console.log("Inside submit handler")
