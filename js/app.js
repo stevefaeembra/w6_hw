@@ -57,8 +57,8 @@ const makeAlbumCard = function (album) {
   ratingDiv.classList.add("rating_"+album.rating);
 
   // add stars!
-  for (let i=0; i< 6; i++) {
-    if (i<=album.rating) {
+  for (let i=0; i< 5; i++) {
+    if (i<album.rating) {
       // filled in stars
       const solidStar = document.createElement("span");
       solidStar.className="filledStar";
@@ -119,6 +119,16 @@ const refreshAlbumList = function () {
   clearAllAlbums();
   renderAllAlbums();
 };
+
+// sort the album list by a specified field in the album class
+
+const sortAlbumsByField = function (fieldName) {
+
+  return albums.sort(function(a, b){return 0.5 - Math.random()});
+
+}
+
+
 
 // handle submit, creates a new album object from form
 // adds it to albums list and triggers a redraw
