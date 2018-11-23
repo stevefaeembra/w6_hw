@@ -88,6 +88,15 @@ const renderAllAlbums = function () {
   })
 }
 
+// remove all albums from the container
+
+const clearAllAlbums = function () {
+  const container = document.querySelector(".container");
+  while(container.hasChildNodes()) {
+    container.removeChild(container.firstChild);
+  }
+}
+
 // handle submit, creates a new album object from form
 // adds it to albums list and triggers a redraw
 
