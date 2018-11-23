@@ -66,4 +66,12 @@ body {
   max-height: 100%;
 }
 
+.filledStar {
+  color: black;
+}
+
+.emptyStar {
+  color: lightgrey;
+}
+
 /*# sourceMappingURL=layout.css.map */
