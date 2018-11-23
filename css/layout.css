@@ -71,7 +71,7 @@ body {
 }
 
 .emptyStar {
-  color: lightgrey;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 /*# sourceMappingURL=layout.css.map */
