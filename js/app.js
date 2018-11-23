@@ -18,11 +18,8 @@ const Album = function (name,artist,year,genre,rating,url) {
 const albums = [
 
   new Album("Dark Side of the Moon","Pink Floyd",1973,"Prog",3,"http://quizpug.com/wp-content/uploads/qc-images/59ca6acd85f16.jpg"),
-
   new Album("777","System7",1993,"Electronica",3,"https://upload.wikimedia.org/wikipedia/en/9/9d/System_7_-_777.jpg"),
-
   new Album("Nothing lasts... but nothing is lost","Shpongle",2005,"Psybient",5,"https://upload.wikimedia.org/wikipedia/en/thumb/d/d8/Nothinglasts_2005.jpg/220px-Nothinglasts_2005.jpg"),
-
   new Album("You make me real","Brandt Brauer Frick",2005,"Electronica",4,"https://s14-eu5.startpage.com/cgi-bin/serveimage?url=https:%2F%2Fstatic.prsa.pl%2Fimages%2F6a3dab39-37cf-4c64-a2d2-c428497eabf8.jpg&sp=27da73d81d2065bd272c706a1f05953c")
 
 ];
@@ -76,7 +73,7 @@ const makeAlbumCard = function (album) {
 
   // send back albumDiv
   return albumDiv;
-}
+};
 
 // render all albums and inject into container
 
@@ -86,7 +83,7 @@ const renderAllAlbums = function () {
     const card = makeAlbumCard(album);
     container.appendChild(card);
   })
-}
+};
 
 // remove all albums from the container
 
@@ -95,7 +92,14 @@ const clearAllAlbums = function () {
   while(container.hasChildNodes()) {
     container.removeChild(container.firstChild);
   }
-}
+};
+
+// clear and redraw the album list
+
+const refreshAlbumList = function () {
+  clearAllAlbums();
+  renderAllAlbums();
+};
 
 // handle submit, creates a new album object from form
 // adds it to albums list and triggers a redraw
@@ -107,6 +111,7 @@ const handleSubmit = (event) => {
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('JavaScript loaded');
+  refreshAlbumList();
   const submit = document.querySelector('form');
   submit.addEventListener('submit', handleSubmit);
-})
+});
