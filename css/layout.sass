@@ -5,12 +5,14 @@
 
 html
   font-size: 26px
+  font-family: 'Lato', sans-serif
 
 body
   width:90%
   margin: 0 auto
 
 .container
+  margin-top: 2rem
   display: grid
   grid-auto-flow: row
   grid-row-gap: 1rem
@@ -24,6 +26,17 @@ body
   display: flex
   flex-direction: column
   max-width: 200px
+  font-size: 1rem
+  text-align: center
+  .albumName
+    color: red
+    font-size: 1.4rem
+  .artistName
+    font-size: 1.1rem
+  .genre
+    font-size: 0.8rem
+  .year
+    font-size: 0.8rem
 
 .thumbnail img
   max-width: 100%
