@@ -1,5 +1,9 @@
 // this is the Album 'class' representing a single album
 
+let perspective = 500; // perspective fov value
+let yJauntiness = 30;  // y rotation for tilted album covers
+let xJauntiness = 5; // x rotation for tilted album covers
+
 const Album = function (name,artist,year,genre,rating,url) {
   this.name = name;
   this.artist = artist;
@@ -166,12 +170,49 @@ const handleSortChange = (event) => {
   sortAlbumsByField(sortType);
 };
 
+// handle a range change
+
+// perspectiveAmount
+
+const handlePerspective = (event) => {
+  perspective = event.target.value ;
+  console.log(`Perspective ${perspective}`);
+  const thumbnails = document.querySelectorAll('div.thumbnail img');
+  [...thumbnails].forEach((thumbnail) => {
+    const transform = thumbnail.style.transform;
+    console.log(transform);
+    thumbnail.style.transform = `perspective(${perspective}px) rotateY(${yJauntiness}deg) rotateX(${xJauntiness}deg) scale(1.0)`;
+  });
+}
+
+// alter album angle of tilt (jauntiness)
+const handleYJauntiness = (event) => {
+  yJauntiness = event.target.value ;
+  console.log(`Y Jauntiness ${yJauntiness}deg`);
+  const thumbnails = document.querySelectorAll('div.thumbnail img');
+  [...thumbnails].forEach((thumbnail) => {
+    const transform = thumbnail.style.transform;
+    console.log(transform);
+    thumbnail.style.transform = `perspective(${perspective}px) rotateY(${yJauntiness}deg) rotateX(${xJauntiness}deg) scale(1.0)`;
+  });
+}
+
+const handleXJauntiness = (event) => {
+  xJauntiness = event.target.value ;
+  console.log(`Y Jauntiness ${xJauntiness}deg`);
+  const thumbnails = document.querySelectorAll('div.thumbnail img');
+  [...thumbnails].forEach((thumbnail) => {
+    const transform = thumbnail.style.transform;
+    console.log(transform);
+    thumbnail.style.transform = `perspective(${perspective}px) rotateY(${yJauntiness}deg) rotateX(${xJauntiness}deg) scale(1.0)`;
+  });
+}
 
 // kick things off once the DOM has loaded
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('JavaScript loaded');
-  sortAlbumsByField("name");
+
   // do we have albums in localstorage? if so use that
   // localStorage uses strings so need to expand from a string
   if (window.localStorage.getItem("albums")) {
@@ -179,9 +220,23 @@ document.addEventListener('DOMContentLoaded', () => {
     //debugger;
     console.log("Recalled albums from LocalStorage");
   }
+
+  sortAlbumsByField("name");
   refreshAlbumList();
+
   const submit = document.querySelector('form');
   submit.addEventListener('submit', handleSubmit);
+
   const sortButton = document.querySelector('#sortBy');
   sortButton.addEventListener('change', handleSortChange);
+
+  const perspectiveSlider = document.querySelector('#perspectiveSlider');
+  perspectiveSlider.addEventListener('change', handlePerspective);
+
+  const jauntinessSlider = document.querySelector('#jauntinessSlider');
+  jauntinessSlider.addEventListener('change', handleYJauntiness);
+
+  const jauntinessSlider2 = document.querySelector('#jauntinessSlider2');
+  jauntinessSlider2.addEventListener('change', handleXJauntiness);
+
 });

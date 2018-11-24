@@ -71,14 +71,14 @@ body
     transform: perspective(400px) translateZ(0) rotateY(30deg) rotateX(10deg) scale(1.0)
   to
     z-index: 10
-    transform: perspective(400px) translateZ(10px) rotateY(0deg) rotateX(-2deg) scale(1.2)
+    transform: perspective(400px) translateZ(0px) rotateY(0deg) rotateX(0deg) scale(1.2)
 
 .thumbnail img
   width: 200px
   height: 200px
   max-width: 90%
   box-shadow: 0 0 5px rgba(0,0,0,.38)
-  transform: perspective(400px) rotateY(30deg) rotateX(10deg) scale(1.1)
+  transform: perspective(500px) rotateY(30deg) rotateX(10deg) scale(1.1)
   &:hover
     animation: tilt
     animation-name: tilt
@@ -93,9 +93,9 @@ body
 .emptyStar
   color: rgba(255,0,0,.2)
 
-.two-col
+.twocol
   display: flex
-  flex-direction: column
+  flex-direction: row
   flex-wrap: wrap
   justify-content: space-between
   align-content: flex-start
