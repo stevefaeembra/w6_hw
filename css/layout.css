@@ -9,6 +9,10 @@ html {
   font-family: "Lato", sans-serif;
 }
 
+h1 {
+  margin-bottom: 1rem;
+}
+
 body {
   width: 90%;
   margin: 0 auto;
@@ -25,6 +29,8 @@ body {
 
 .album-card {
   background-color: white;
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
   border-radius: 1rem;
   padding: 0.5rem;
@@ -119,7 +125,10 @@ body {
 
 .right {
   display: inline-block;
-  width: 20%;
+  width: 29%;
+}
+.right form {
+  margin-bottom: 0.7rem;
 }
 
 #sortOptions input {
@@ -129,6 +138,13 @@ body {
 input, select {
   border-radius: 4px;
   font-size: 1.3rem;
+}
+
+form {
+  padding: 1rem;
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
 }
 
 .form-input {
