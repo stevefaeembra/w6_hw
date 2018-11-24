@@ -142,7 +142,7 @@ const sortAlbumsByField = function (fieldName) {
 
 const handleSubmit = (event) => {
   event.preventDefault();
-  debugger;
+  //debugger;
   const form = event.target;
   const newAlbum = new Album(
     form.albumName.value,
@@ -154,7 +154,8 @@ const handleSubmit = (event) => {
   );
   albums.push(newAlbum);
   refreshAlbumList();
-  console.log("Inside submit handler")
+  window.localStorage.setItem("albums",JSON.stringify(albums));
+  console.log("Added new item to localStorage");
 }
 
 // handle a change in the sort order
@@ -171,6 +172,13 @@ const handleSortChange = (event) => {
 document.addEventListener('DOMContentLoaded', () => {
   console.log('JavaScript loaded');
   sortAlbumsByField("name");
+  // do we have albums in localstorage? if so use that
+  // localStorage uses strings so need to expand from a string
+  if (window.localStorage.getItem("albums")) {
+    albums = JSON.parse(window.localStorage.getItem("albums"));
+    //debugger;
+    console.log("Recalled albums from LocalStorage");
+  }
   refreshAlbumList();
   const submit = document.querySelector('form');
   submit.addEventListener('submit', handleSubmit);
