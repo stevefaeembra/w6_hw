@@ -137,8 +137,6 @@ const sortAlbumsByField = function (fieldName) {
 
 }
 
-
-
 // handle submit, creates a new album object from form
 // adds it to albums list and triggers a redraw
 
@@ -159,10 +157,21 @@ const handleSubmit = (event) => {
   console.log("Inside submit handler")
 }
 
+// handle a change in the sort order
+
+const handleSortChange = (event) => {
+  console.log("In sort change handler");
+}
+
+
+// kick things off once the DOM has loaded
+
 document.addEventListener('DOMContentLoaded', () => {
   console.log('JavaScript loaded');
   sortAlbumsByField("name");
   refreshAlbumList();
   const submit = document.querySelector('form');
   submit.addEventListener('submit', handleSubmit);
+  const sortButton = document.querySelector('#sortBy');
+  sortButton.addEventListener('change', handleSortChange);
 });

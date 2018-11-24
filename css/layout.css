@@ -74,7 +74,7 @@ body {
   width: 200px;
   height: 200px;
   max-width: 90%;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.38);
   transform: perspective(400px) rotateY(30deg) rotateX(10deg) scale(1.1);
 }
 
