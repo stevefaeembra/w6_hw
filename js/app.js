@@ -22,7 +22,9 @@ let albums = [
   new Album("Nothing lasts... but nothing is lost","Shpongle",2005,"Psybient",5,"https://upload.wikimedia.org/wikipedia/en/thumb/d/d8/Nothinglasts_2005.jpg/220px-Nothinglasts_2005.jpg"),
   new Album("You make me real","Brandt Brauer Frick",2005,"Electronica",4,"https://s14-eu5.startpage.com/cgi-bin/serveimage?url=https:%2F%2Fstatic.prsa.pl%2Fimages%2F6a3dab39-37cf-4c64-a2d2-c428497eabf8.jpg&sp=27da73d81d2065bd272c706a1f05953c"),
   new Album("Debut","Björk",1994,"Electronica",4,"https://upload.wikimedia.org/wikipedia/en/7/77/Bj%C3%B6rk-Debut-1993.png"),
-  new Album("Phaedra","Tangerine Dream",1974,"Krautrock",5,"https://upload.wikimedia.org/wikipedia/en/a/a0/Phaedra.png")
+  new Album("Phaedra","Tangerine Dream",1974,"Krautrock",5,"https://upload.wikimedia.org/wikipedia/en/a/a0/Phaedra.png"),
+  new Album("Optical Race","Tangerine Dream",1988,"Electronica",2,"https://upload.wikimedia.org/wikipedia/en/9/9b/Optical_Race.png"),
+  new Album("Abbey Road","Beatles",1968,"Rock",5,"https://upload.wikimedia.org/wikipedia/en/4/42/Beatles_-_Abbey_Road.jpg")
 
 ];
 

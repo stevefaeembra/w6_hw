@@ -24,7 +24,6 @@ body {
 }
 
 .album-card {
-  border: 1px solid black;
   border-radius: 1rem;
   padding: 0.5rem;
   display: flex;
@@ -44,6 +43,7 @@ body {
 .album-card .ArtistName {
   order: 2;
   font-size: 1.1rem;
+  border-bottom: 2px soid black;
 }
 .album-card .genre {
   order: 4;
@@ -69,11 +69,11 @@ body {
 }
 
 .filledStar {
-  color: black;
+  color: red;
 }
 
 .emptyStar {
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 0, 0, 0.2);
 }
 
 /*# sourceMappingURL=layout.css.map */
