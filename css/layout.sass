@@ -67,9 +67,11 @@ body
 
 @keyframes tilt
   from
-    transform: perspective(400px) rotateY(30deg) rotateX(10deg) scale(1.1)
+    z-index: 1
+    transform: perspective(400px) translateZ(0) rotateY(30deg) rotateX(10deg) scale(1.0)
   to
-    transform: perspective(400px) rotateY(0deg) rotateX(-2deg) scale(1.4)
+    z-index: 10
+    transform: perspective(400px) translateZ(10px) rotateY(0deg) rotateX(-2deg) scale(1.2)
 
 .thumbnail img
   width: 200px
