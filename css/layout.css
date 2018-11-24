@@ -5,7 +5,7 @@
 }
 
 html {
-  font-size: 26px;
+  font-size: 16px;
   font-family: "Lato", sans-serif;
 }
 
@@ -74,6 +74,47 @@ body {
 
 .emptyStar {
   color: rgba(255, 0, 0, 0.2);
+}
+
+.two-col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.left {
+  display: inline-block;
+  width: 70%;
+}
+
+.right {
+  display: inline-block;
+  width: 20%;
+}
+
+#sortOptions input {
+  display: inline-block;
+}
+
+input, select {
+  font-size: 1.3rem;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-item {
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row;
+}
+.form-item label {
+  width: 30%;
 }
 
 /*# sourceMappingURL=layout.css.map */
