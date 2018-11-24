@@ -17,11 +17,11 @@
         <h3>Add new album</h3>
         <form action="" class="form-input">
           <div id="Form-AlbumName" class="form-item">
-            <label for="AlbumName">Album Name</label>
+            <label for="AlbumName">Album</label>
             <input id="albumName" type="text" placeholder="Name of Album"/>
           </div>
           <div id="Form-ArtistName" class="form-item">
-            <label for="ArtistName">Artist Name</label>
+            <label for="ArtistName">Artist</label>
             <input id="artistName" type="text" placeholder="Name of Artist"/>
           </div>
           <div id="Form-YearOfRelease"class="form-item">
@@ -56,7 +56,7 @@
       </div>
       <div class="right">
         <h3>Settings</h3>
-        <form id="sortOptions">
+        <form id="sortOptions" class="form-item">
           <label for="sortBy">Sort by...</label>
           <select name="sortBy" id="sortBy">
             <option value="name">Album Title</option>
@@ -66,15 +66,15 @@
             <option value="year">Year of release</option>
           </select>
         </form>
-        <form action="" id="perspectiveControl">
+        <form action="" id="perspectiveControl" class="form-item">
           <label for="perspectiveSlider">Perspective FOV</label>
           <input id="perspectiveSlider" type="range" min=150 value=500 max=700 />
         </form>
-        <form action="" id="jauntinessControl">
+        <form action="" id="jauntinessControl" class="form-item">
           <label for="jauntinessSlider">Album Rotation</label>
           <input id="jauntinessSlider" type="range" min=0 value=30 max=80 />
         </form>
-        <form action="" id="jauntinessControl2">
+        <form action="" id="jauntinessControl2" class="form-item">
           <label for="jauntinessSlider2">Album Tilt</label>
           <input id="jauntinessSlider2" type="range" min=0 value=10 max=50 />
         </form>
