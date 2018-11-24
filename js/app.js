@@ -157,6 +157,8 @@ const handleSubmit = (event) => {
     form.imageUrl.value
   );
   albums.push(newAlbum);
+  // re-sort the list and refresh it
+  sortAlbumsByField(document.querySelector('#sortBy').value);
   refreshAlbumList();
   window.localStorage.setItem("albums",JSON.stringify(albums));
   console.log("Added new item to localStorage");
