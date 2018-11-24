@@ -91,7 +91,7 @@ body
   &:hover
     animation: tilt
     animation-name: tilt
-    animation-duration: 300ms
+    animation-duration: 200ms
     animation-timing-function: ease-in-out
     animation-fill-mode: forwards
 
@@ -111,16 +111,18 @@ body
   align-items: flex-start
 
 .left
-  display: inline-block
-  width: 70%
+  display: block
+  //width: 70%
 
 // sort options panel
 
 .right
-  display: inline-block
-  width: 29%
-  & form
-    margin-bottom: .7rem
+  display: flex
+  flex-direction: column
+  align-content: flex-start
+  justify-content: space-between
+  //width: 29%
+
 
 #sortOptions input
   display: inline-block
@@ -130,11 +132,14 @@ body
 input, select
   border-radius: 4px
   font-size: 1.3rem
+  padding-left: .5rem
 
 form
   //border: 1px solid black
   padding: 1rem
   @include shade
+  border-radius: 1rem
+  width: 100%
 
 .form-input
   display: flex
@@ -148,5 +153,5 @@ form
   label
     width: 30%
 
-input:placeholder
+::placeholder
   color: rgba(0,0,0,.1)
