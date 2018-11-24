@@ -170,6 +170,7 @@ const handleSortChange = (event) => {
   console.log("In sort change handler");
   var sortType = event.target.value;
   sortAlbumsByField(sortType);
+  refreshAlbumList();
 };
 
 // handle a range change
