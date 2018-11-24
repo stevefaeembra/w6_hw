@@ -66,6 +66,7 @@ body {
 .thumbnail img {
   width: 200px;
   height: 200px;
+  max-width: 90%;
 }
 
 .filledStar {
@@ -115,6 +116,10 @@ input, select {
 }
 .form-item label {
   width: 30%;
+}
+
+input:placeholder {
+  color: rgba(0, 0, 0, 0.1);
 }
 
 /*# sourceMappingURL=layout.css.map */
