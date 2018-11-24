@@ -161,7 +161,9 @@ const handleSubmit = (event) => {
 
 const handleSortChange = (event) => {
   console.log("In sort change handler");
-}
+  var sortType = event.target.value;
+  sortAlbumsByField(sortType);
+};
 
 
 // kick things off once the DOM has loaded
