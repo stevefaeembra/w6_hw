@@ -98,16 +98,16 @@ body {
 
 @keyframes tilt {
   from {
-    filter: grayscale(0.7);
+    filter: saturate(0.3) blur(1px);
     transform: perspective(400px) translateZ(0) rotateY(30deg) rotateX(10deg) scale(1);
   }
   to {
-    filter: grayscale(0);
+    filter: saturate(1) blur(0px);
     transform: perspective(400px) translateZ(0px) rotateY(0deg) rotateX(0deg) scale(1.3);
   }
 }
 .thumbnail img {
-  filter: grayscale(0.7);
+  filter: saturate(0.3) blur(1px);
   width: 200px;
   height: 200px;
   max-width: 90%;
