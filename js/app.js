@@ -3,6 +3,7 @@
 let perspective = 500; // perspective fov value
 let yJauntiness = 30;  // y rotation for tilted album covers
 let xJauntiness = 5; // x rotation for tilted album covers
+let showMenu = false; // menu hidden by default
 
 const Album = function (name,artist,year,genre,rating,url) {
   this.name = name;
@@ -211,6 +212,18 @@ const handleXJauntiness = (event) => {
   });
 }
 
+// hide or reveal the menu
+
+const handleToggleHeader = (event) => {
+  showMenu = !showMenu;
+  const headerMenu = document.querySelector('.twocol');
+  if (showMenu) {
+    headerMenu.style.display = 'flex';
+  } else {
+    headerMenu.style.display = 'none';
+  }
+}
+
 // kick things off once the DOM has loaded
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -241,5 +254,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const jauntinessSlider2 = document.querySelector('#jauntinessSlider2');
   jauntinessSlider2.addEventListener('change', handleXJauntiness);
+
+  const headerArea = document.querySelector('h1');
+  headerArea.addEventListener('click', handleToggleHeader);
 
 });
