@@ -98,11 +98,11 @@ body {
 
 @keyframes tilt {
   from {
-    filter: saturate(0.3) blur(1px);
+    filter: saturate(0.3);
     transform: perspective(400px) translateZ(0) rotateY(30deg) rotateX(10deg) scale(1);
   }
   to {
-    filter: saturate(1) blur(0px);
+    filter: saturate(1);
     transform: perspective(400px) translateZ(0px) rotateY(0deg) rotateX(0deg) scale(1.3);
   }
 }
